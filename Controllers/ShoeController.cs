@@ -25,12 +25,11 @@ namespace gitKovaNaal.Controllers
         [HttpPost, ValidateAntiForgeryToken]
 
         //אישור יצירת נעל
-        public IActionResult CreateShoe(Hat NewShoe)
+        public IActionResult CreateShoe(Shoe NewShoe)
         {
             if (NewShoe == null) { return Redirect("Index"); }
-            var shoe = new Shoe();
-            shoe = NewShoe;
-            Data.Get.Shoes.Add(shoe);
+           
+            Data.Get.Shoes.Add(NewShoe);
             Data.Get.SaveChanges();
 
             return RedirectToAction("ShoeIndex");
