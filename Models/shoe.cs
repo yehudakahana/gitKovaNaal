@@ -29,5 +29,9 @@ namespace gitKovaNaal.Models
             Brand = Brand;
             Image = Image; 
         }
+
+        public Shoe()
+        {
+        }
     }
 }
