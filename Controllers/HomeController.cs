@@ -6,11 +6,11 @@ using System.Drawing.Drawing2D;
 
 namespace gitKovaNaal.Controllers
 {
-    public class HatController : Controller
+    public class HomeController : Controller
     {
-        private readonly ILogger<HatController> _logger;
+        private readonly ILogger<HomeController> _logger;
 
-        public HatController(ILogger<HatController> logger)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
