@@ -21,6 +21,7 @@ namespace gitKovaNaal.Controllers
         }
         public IActionResult HatIndex()
         {
+            
             return View(Data.Get.Hats);
         }
         public IActionResult CreateHat()
