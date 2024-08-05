@@ -18,6 +18,7 @@ namespace gitKovaNaal.Controllers
         public IActionResult Index()
         {
             return View();
+
         }
         public IActionResult HatIndex()
         {
