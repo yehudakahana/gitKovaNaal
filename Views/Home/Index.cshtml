@@ -2,8 +2,42 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>ברוכים הבאים לרשת החנויות </h1>
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
 
-<a asp-action="ShoeIndex" class="btn btn-primary btn-sm">לחנות הנעליים</a>
-<a asp-action="HatIndex" class="btn btn-primary btn-sm">לחנות הכובעים</a>
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
 
+        .btn-custom {
+            margin: 10px;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .header {
+            font-size: 2.5rem;
+            color: #343a40;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">ברוכים הבאים לרשת החנויות</h1>
+        <a asp-controller="Shoe" asp-action="ShoeIndex" class="btn btn-primary btn-sm">לחנות הנעליים</a>
+        <a asp-action="HatIndex" class="btn btn-primary btn-custom">לחנות הכובעים</a>
+    </div>
+</body>
+</html>
