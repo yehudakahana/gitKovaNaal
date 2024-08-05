@@ -34,6 +34,8 @@ namespace gitKovaNaal.Controllers
             if (NewHat == null) { return Redirect("Index");}
             var hat = new Hat();
             hat = NewHat;
+            Data.Get.Hats.Add(hat);
+            Data.Get.SaveChanges();
             
             
 
