@@ -24,22 +24,17 @@ namespace gitKovaNaal.Controllers
             return View(Data.Get.Hats);
         }
         public IActionResult CreateHat()
-        { 
-        return View(new Hat());
+        {
+            return View(new Hat());
         }
         [HttpPost, ValidateAntiForgeryToken]
 
         public IActionResult CreateHat(Hat NewHat)
-        { 
-            if (NewHat == null) { return Redirect("Index");}
-            var hat = new Hat();
-            hat = NewHat;
-            Data.Get.Hats.Add(hat);
+        {
+            if (NewHat == null) { return Redirect("Index"); }            
+            Data.Get.Hats.Add(NewHat);
             Data.Get.SaveChanges();
-            
-            
-
-        return RedirectToAction("HatIndex");
+            return RedirectToAction("HatIndex");
         }
 
         public IActionResult Privacy()

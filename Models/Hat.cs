@@ -14,6 +14,7 @@ namespace gitKovaNaal.Models
         [Display(Name = "מידה")]
 
         public string Size { get; set; }
+        [Display(Name = "תמונה")]
         public string Photo {  get; set; }
         public Hat(string company, string color, string size, string photo) 
         {
